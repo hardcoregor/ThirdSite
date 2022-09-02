@@ -1,0 +1,26 @@
+// compress: true
+
+@import "vars";
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: @black;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Blocks */ 
+@import "blocks/container.less";
+@import "blocks/header.less";
+@import "blocks/user.less";
+@import "blocks/nav.less";
