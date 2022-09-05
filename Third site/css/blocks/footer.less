@@ -1,0 +1,67 @@
+// main: ../style.less
+
+.footer {
+  background-color: @black;
+  padding: 1.5rem 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__credits {
+  display: flex;
+  align-items: center;
+}
+
+.footer__copyright {
+  padding-right: 1.2rem;
+  margin-right: 1.6rem;
+  font-size: 1.4rem;
+  color: #BBBBCC;
+  border-right: 1px solid fade(@gray, 35%);
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin-right: 1.7rem;
+    text-decoration: none;
+  }
+  
+}
+
+.footer__nav {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer__nav-link {
+  margin-left: 2.2rem;
+  color: #BBBBCC;
+  text-decoration: none;
+
+  transition: background-color .2s linear, border-color .2s linear, color .2s linear;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &--btn {
+    padding: 0.7rem 2rem;
+    border: 1px solid @gray-light;
+    border-radius: 2rem;
+    line-height: 1.1;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #BBBBCC;
+      border-color: #BBBBCC;;
+      color: @black;
+    }
+  }
+}
