@@ -13,7 +13,7 @@
   <title>Portfolio</title>
 </head>
 
-<body class="no-scroll">
+<body>
 
 
 
@@ -444,7 +444,9 @@
     </div><!-- modal__dialog -->
   </div><!-- /.modal -->
 
-  <div class="modal">
+
+  <!-- 2nd modal -->
+  <div class="modal" style="display: none;">
     <div class="modal__dialog">
 
       <button class="modal__close" type="button">
@@ -452,16 +454,183 @@
       </button>
 
       <div class="modal__content">
-        <h3 class="modal__title">RESUME</h3>
+        <h3 class="modal__title text-center">RESUME</h3>
 
-        <a href="">Download PDF</a>
-        <a href="">Print</a>
-      </div>
+        <div class="text-center">
+          <a class="btn btn--thin" href="">Download PDF</a>
+          <a class="btn btn--thin" href="">Print</a>
+        </div>
 
+        <div class="timeline">
+          <div class="timeline__col timeline__col--left">
+            <h4 class="timeline__title">Experience</h4>
 
-    </div><!-- modal__dialog -->
+            <div class="timeline__item">
+              <time class="timeline__date" datetime="11-21-2017">2017 - <b>Present</b></time>
+              <h5 class="timeline__subtitle">Freelancer</h5>
+              <div class="timeline__position">Art Director</div>
+              <div class="timeline__text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium et, quibusdam incidunt tempora
+                  repellat ipsam ipsum nulla quae nobis voluptas, veniam quos placeat nam culpa libero minima sapiente.
+                  Voluptate, est!</p>
+              </div>
+            </div>
+
+            <div class="timeline__item">
+              <time class="timeline__date" datetime="11-21-2017">2017 - <b>Present</b></time>
+              <h5 class="timeline__subtitle">Freelancer</h5>
+              <div class="timeline__position">Art Director</div>
+              <div class="timeline__text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium et, quibusdam incidunt tempora
+                  repellat ipsam ipsum nulla quae nobis voluptas, veniam quos placeat nam culpa libero minima sapiente.
+                  Voluptate, est!</p>
+              </div>
+            </div>
+
+            <div class="timeline__item">
+              <time class="timeline__date" datetime="11-21-2017">2017 - <b>Present</b></time>
+              <h5 class="timeline__subtitle">Freelancer</h5>
+              <div class="timeline__position">Art Director</div>
+              <div class="timeline__text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium et, quibusdam incidunt tempora
+                  repellat ipsam ipsum nulla quae nobis voluptas, veniam quos placeat nam culpa libero minima sapiente.
+                  Voluptate, est!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__col timeline__col--right">
+            <h4 class="timeline__title">Education</h4>
+
+            <div class="timeline__item">
+              <time class="timeline__date" datetime="11-21-2017">2005 - 2010</time>
+              <h5 class="timeline__subtitle">UI/UX Design</h5>
+              <div class="timeline__position">LA University, USA</div>
+            </div>
+
+            <div class="timeline__item">
+              <time class="timeline__date" datetime="11-21-2017">2005 - 2010</time>
+              <h5 class="timeline__subtitle">UI/UX Design</h5>
+              <div class="timeline__position">LA University, USA</div>
+            </div>
+
+            <h4 class="timeline__title">Skills</h4>
+            <div class="progress-bar">
+              <div class="progress-bar__item">
+                <div class="progress__left">
+                  <div class="progress-bar__title">UI/UX Design</div>
+                </div>
+                <div class="progress__right">
+                  <div class="progress-bar__bar">
+                    <div class="progress-bar__progress" style="width: 30%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="progress-bar__item">
+                <div class="progress__left">
+                  <div class="progress-bar__title">UI/UX Design</div>
+                </div>
+                <div class="progress__right">
+                  <div class="progress-bar__bar">
+                    <div class="progress-bar__progress" style="width: 60%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="progress-bar__item">
+                <div class="progress__left">
+                  <div class="progress-bar__title">UI/UX Design</div>
+                </div>
+                <div class="progress__right">
+                  <div class="progress-bar__bar">
+                    <div class="progress-bar__progress" style="width: 80%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="progress-bar__item">
+                <div class="progress__left">
+                  <div class="progress-bar__title">UI/UX Design</div>
+                </div>
+                <div class="progress__right">
+                  <div class="progress-bar__bar">
+                    <div class="progress-bar__progress" style="width: 90%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.progress-bar -->
+
+            <h4 class="timeline__title">Awards</h4>
+            <div class="timeline__item">
+              <time class="timeline__date" datetime="11-21-2017">2010</time>
+              <h5 class="timeline__subtitle">UI/UX Design</h5>
+              <div class="timeline__position">LA University, USA</div>
+              <div class="timeline__text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium et, quibusdam incidunt tempora
+                  repellat ipsam ipsum nulla quae nobis voluptas, veniam quos placeat nam culpa libero minima sapiente.
+                  Voluptate, est!</p>
+              </div>
+            </div>
+
+          </div><!-- /.timeline__col -->
+
+        </div><!-- /.timeline -->
+
+        <div class="text-center">
+          <a class="btn" href="">Hire Me</a>
+        </div>
+      </div><!-- /.modal__content -->
+
+    </div><!-- /.modal__dialog -->
   </div><!-- /.modal -->
 
+
+  <!-- 3rd moadl -->
+  <div class="modal" style="display: none;">
+    <div class="modal__dialog modal__dialog--sm">
+
+      <button class="modal__close" type="button">
+        <img src="./images/modal/modal-close.svg" alt="Close">
+      </button>
+
+      <div class="contact">
+        <div class="contact__left">
+          <h3 class="modal__title mb-0">Let's talk!</h3>
+          <div class="modal__subtitle">Call me or send me a request</div>
+
+          <ul class="contact__info">
+            <li class="contact__info-item">
+              <img class="contact__info-icon" src="./images/modal/phone.svg" height="17" alt="">
+              (200) 100 3000
+            </li>
+            <li class="contact__info-item">
+              <img class="contact__info-icon" src="./images/modal/mail.svg" height="17" alt="">
+              chipalaha@gmail.com
+            </li>
+          </ul>
+
+          <form class="form" action="/" method="post">
+            <div class="form_group">
+              <label class="form__label" for="input-email">Adress e-mail</label>
+              <input class="form__input" name="input-email" type="text" id="input-email" placeholder="Adress e-mail">
+            </div>
+
+            <div class="form_group">
+              <label class="form__label" for="input-text">Request</label>
+              <textarea class="form__textarea" name="input-text" id="input-text"
+                placeholder="Type your request..."></textarea>
+            </div>
+
+            <div class="text-right">
+              <button class="btn" type="submit">Send</button>
+            </div>
+          </form>
+        </div><!-- /.contact__left -->
+      </div><!-- /.contact -->
+
+    </div><!-- /.modal__dialog -->
+  </div><!-- /.modal -->
 
 </body>
 
