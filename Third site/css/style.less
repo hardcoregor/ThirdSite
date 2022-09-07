@@ -17,6 +17,13 @@ body {
   }
 }
 
+html, body {
+  width:100%; 
+  height:100%; 
+  overflow-x:hidden
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -30,6 +37,10 @@ p {
 *:after {
   box-sizing: border-box;
 }
+
+/* Vendor */ 
+@import "vendor/slick.less";
+
 
 /* Blocks */ 
 @import "blocks/container.less";
@@ -53,6 +64,7 @@ p {
 @import "blocks/progress-bar.less";
 @import "blocks/contact.less";
 @import "blocks/form.less";
+@import "blocks/burger.less";
 
 /* Helpers */
 @import "helpers";

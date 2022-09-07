@@ -1,6 +1,9 @@
 // main: ../style.less
 
 .intro {
+  @media @mobile {
+    margin-top: 8rem;
+  }
 }
 
 .intro__inner {
@@ -12,16 +15,39 @@
   background: url(../images/intro/intro_bg.png) right bottom no-repeat;
 
   border-bottom: 1px solid fade(@gray, 30%);
+
+  @media @tablet {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    background-size: 350px auto;
+  }
+
+  @media @mobile {
+    background-size: 310px auto;
+  }  
 }
 
 .intro__content {
   width: 50%;
+
+  @media @mobile {
+    width: 60%;
+  }  
+  
+  @media @mobile-sm {
+    width: 100%;
+  }
 }
 
 .intro__subtitle {
   font-size: 3.2rem;
   color: @black;
   font-weight: 200;
+
+  @media @tablet {
+    font-size: 2.2rem;
+  }
 }
 
 .intro__title {
@@ -29,6 +55,10 @@
   font-size: 4.5rem;
   color: @black;
   font-weight: 700;
+
+  @media @tablet {
+    font-size: 3rem;
+  }
 }
 
 .intro__text {
@@ -43,4 +73,16 @@
   bottom: 0;
   right: 6.5rem;
   z-index: 1;
+
+  @media @tablet {
+    height: 350px;
+  }
+
+  @media @mobile {
+    height: 300px;
+  }
+
+  @media @mobile-sm {
+    display: none;
+  }
 }

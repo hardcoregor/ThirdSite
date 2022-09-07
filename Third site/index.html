@@ -11,6 +11,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -34,13 +37,17 @@
           </div>
         </div>
 
-        <nav class="nav">
+        <nav class="nav" id="nav">
           <a class="nav__link" href="">Work</a>
           <a class="nav__link" href="">About me</a>
           <a class="nav__link" href="">Blog</a>
           <a class="nav__link" href="">Contact</a>
-          <a class="nav__link nav__link--btn" href="">Hire me</a>
+          <a class="nav__link nav__link--btn" href="" data-modal="#modal_hire_me">Hire me</a>
         </nav>
+
+        <button class="burger" type="button" id="navToggle">
+          <img class="burger__icon" src="./images/nav/burger-menu.svg" alt="">
+        </button>
       </div>
     </div>
   </header>
@@ -78,8 +85,8 @@
             </a>
           </div>
 
-          <a class="btn" href="">Hire me</a>
-          <button class="btn" type="button" href="">See my resume</button>
+          <a class="btn" data-modal="#modal_hire_me">Hire me</a>
+          <button class="btn" type="button" data-modal="#modal_resume">See my resume</button>
         </div>
 
         <img class="intro__photo" src="/images/intro/photo_intro.png" alt="">
@@ -94,19 +101,19 @@
     <div class="container">
 
       <div class="works__nav">
-        <a class="works__nav-link" href="">All</a>
-        <a class="works__nav-link" href="">App</a>
-        <a class="works__nav-link" href="">Website</a>
-        <a class="works__nav-link" href="">Interaction</a>
+        <a class="works__nav-link" href="" data-filter="all">All</a>
+        <a class="works__nav-link" href="" data-filter="app">App</a>
+        <a class="works__nav-link" href="" data-filter="website">Website</a>
+        <a class="works__nav-link" href="" data-filter="interaction">Interaction</a>
       </div>
 
 
       <div class="portfolio">
-        <div class="portfolio__col">
+        <div class="portfolio__col" data-cat="app" data-modal="#modal_project_1">
           <div class="work">
             <img class="work__image" src="https://placehold.co/370x300" alt="">
             <div class="work__content">
-              <div class="work__cat">category</div>
+              <div class="work__cat">category: app</div>
               <div class="work__title">
                 Project title
                 <time class="work__date" datetime="2019-11-22 19:00">2018</time>
@@ -115,11 +122,11 @@
           </div>
         </div>
 
-        <div class="portfolio__col">
+        <div class="portfolio__col" data-cat="website" data-modal="#modal_project_1">
           <div class="work">
             <img class="work__image" src="https://placehold.co/370x300" alt="">
             <div class="work__content">
-              <div class="work__cat">category</div>
+              <div class="work__cat">category: website</div>
               <div class="work__title">
                 Project title
                 <time class="work__date" datetime="2019-11-22 19:00">2018</time>
@@ -128,11 +135,11 @@
           </div>
         </div>
 
-        <div class="portfolio__col">
+        <div class="portfolio__col" data-cat="interaction" data-modal="#modal_project_1">
           <div class="work">
             <img class="work__image" src="https://placehold.co/370x300" alt="">
             <div class="work__content">
-              <div class="work__cat">category</div>
+              <div class="work__cat">category: interaction</div>
               <div class="work__title">
                 Project title
                 <time class="work__date" datetime="2019-11-22 19:00">2018</time>
@@ -141,11 +148,11 @@
           </div>
         </div>
 
-        <div class="portfolio__col">
+        <div class="portfolio__col" data-cat="interaction" data-modal="#modal_project_1">
           <div class="work">
             <img class="work__image" src="https://placehold.co/370x300" alt="">
             <div class="work__content">
-              <div class="work__cat">category</div>
+              <div class="work__cat">category: interaction</div>
               <div class="work__title">
                 Project title
                 <time class="work__date" datetime="2019-11-22 19:00">2018</time>
@@ -154,11 +161,11 @@
           </div>
         </div>
 
-        <div class="portfolio__col">
+        <div class="portfolio__col" data-cat="app" data-modal="#modal_project_1">
           <div class="work">
             <img class="work__image" src="https://placehold.co/370x300" alt="">
             <div class="work__content">
-              <div class="work__cat">category</div>
+              <div class="work__cat">category: app</div>
               <div class="work__title">
                 Project title
                 <time class="work__date" datetime="2019-11-22 19:00">2018</time>
@@ -167,11 +174,11 @@
           </div>
         </div>
 
-        <div class="portfolio__col">
+        <div class="portfolio__col" data-cat="website" data-modal="#modal_project_1">
           <div class="work">
             <img class="work__image" src="https://placehold.co/370x300" alt="">
             <div class="work__content">
-              <div class="work__cat">category</div>
+              <div class="work__cat">category: website</div>
               <div class="work__title">
                 Project title
                 <time class="work__date" datetime="2019-11-22 19:00">2018</time>
@@ -228,9 +235,6 @@
 
       <div class="reviews__item">
         <div class="reviews__text">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolore recusandae unde saepe blanditiis
-            consequatur totam odio aut vel optio harum asperiores excepturi qui nisi perferendis, eum, praesentium
-            repudiandae sed?</p>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolore recusandae unde saepe blanditiis
             consequatur totam odio aut vel optio harum asperiores excepturi qui nisi perferendis, eum, praesentium
             repudiandae sed?</p>
@@ -389,16 +393,25 @@
 
 
   <!-- Modals -->
-  <div class="modal" style="display: none;">
+
+  <!-- 1st modal -->
+  <div class="modal" id="modal_project_1">
     <div class="modal__dialog">
 
-      <button class="modal__close" type="button">
+      <button class="modal__close" type="button" data-close>
         <img src="./images/modal/modal-close.svg" alt="Close">
       </button>
 
       <div class="modal-work">
         <div class="modal-work__preview">
-          <img class="modal-work__photo" src="https://placehold.co/790x780" alt="">
+          <div data-slider="slick">
+            <div>
+              <img class="modal-work__photo" src="https://placehold.co/790x780" alt="">
+            </div>
+            <div>
+              <img class="modal-work__photo" src="https://placehold.co/790x780/333/black" alt="">
+            </div>
+          </div>
         </div>
         <div class="modal-work__content">
 
@@ -428,11 +441,11 @@
           </div>
 
           <div class="modal-work__footer">
-            <button class="modal-work__btn" type="button">
+            <button class="modal-work__btn slickPrev" type="button">
               <img class="modal-work__btn--move" src="./images/modal/arrow-left.svg" height="20" alt="">
               Previous
             </button>
-            <button class="modal-work__btn" type="button">
+            <button class="modal-work__btn slickNext" type="button">
               Next
               <img class="modal-work__btn--move" src="./images/modal/arrow-right.svg" height="20" alt="">
             </button>
@@ -446,10 +459,10 @@
 
 
   <!-- 2nd modal -->
-  <div class="modal" style="display: none;">
+  <div class="modal" id="modal_resume">
     <div class="modal__dialog">
 
-      <button class="modal__close" type="button">
+      <button class="modal__close" type="button" data-close>
         <img src="./images/modal/modal-close.svg" alt="Close">
       </button>
 
@@ -586,11 +599,11 @@
   </div><!-- /.modal -->
 
 
-  <!-- 3rd moadl -->
-  <div class="modal" style="display: none;">
+  <!-- 3rd modal -->
+  <div class="modal" id="modal_hire_me">
     <div class="modal__dialog modal__dialog--sm">
 
-      <button class="modal__close" type="button">
+      <button class="modal__close" type="button" data-close>
         <img src="./images/modal/modal-close.svg" alt="Close">
       </button>
 
@@ -631,6 +644,13 @@
 
     </div><!-- /.modal__dialog -->
   </div><!-- /.modal -->
+
+
+
+  <!-- JS -->
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/app.js"></script>
+
 
 </body>
 

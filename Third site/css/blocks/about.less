@@ -2,28 +2,43 @@
 
 .about {
   margin: 12.6rem 0;
+
+  @media @tablet {
+    margin: 8.6rem 0;
+  }
 }
 
 .about__inner {
   display: flex;
-  min-width: 1090px;
+  max-width: 1090px;
+  flex-wrap: wrap;
+
+  @media @tablet {
+    text-align: center;
+  }
 }
 
 .about__photo,
 .about__content {
   width: 50%;
+
+  @media @tablet {
+    width: 100%;
+  }
 }
 
 .about__photo {
   position: relative;
 
   img {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     z-index: 2;
   }
 
   &:before {
     content: "";
+    display: block;
     width: 41.3rem;
     height: 41.3rem;
     background-color: #EFEFEF;
@@ -34,11 +49,32 @@
     bottom: 0;
     z-index: 1;
   }
+
+  @media @tablet {
+    order: 2;
+
+    &::before {
+      width: 100%;
+      height: 300px;
+
+      left: 0;
+    }
+
+    img {
+      position: relative;
+    }
+  }
 }
 
 .about__content {
   padding-left: 4.8rem;
   margin-top: 3rem;
+
+  @media @tablet {
+    order: 1;
+    padding-left: 0;
+    margin-bottom: 6rem;
+  }
 }
 
 .about__title {
@@ -46,6 +82,14 @@
   font-weight: 700;
   color: @black;
   text-transform: uppercase;
+
+  @media @notebook {
+    font-size: 5rem;
+  }
+
+  @media @mobile {
+    font-size: 3rem;
+  }
 }
 
 .about__subtitle {
@@ -58,6 +102,15 @@
   text-transform: uppercase;
   line-height: 1.1;
   color: fade(@black, 15%);
+
+  @media @notebook {
+    font-size: 6rem;
+  }
+
+  @media @mobile {
+    font-size: 4.5rem;
+    left: 0;
+  }
 }
 
 .about__text {
@@ -68,4 +121,8 @@
   line-height: 2;
   color: @gray;
   font-weight: 300;
+
+  @media @tablet {
+    max-width: 100%;
+  }
 }

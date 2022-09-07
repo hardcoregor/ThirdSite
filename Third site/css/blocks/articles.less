@@ -9,10 +9,19 @@
 .articles__col {
   width: 33.333%;
   padding: 0 3rem;
+
+  @media @mobile {
+    width: 100%;
+  }
 }
 
 .articles__item {
   margin-bottom: 3rem;
+
+  @media @mobile {
+    max-width: 370px;
+    margin: 0 auto 3rem;
+  }
 }
 
 .articles__header {
